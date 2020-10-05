@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Artifika' rel='stylesheet'>
+        <style>
+body{
+    background-image: url("http://dailyhdwallpaper.com/wp-content/uploads/Abstract-Music-S-Background-White-Wallpaper.jpg");
+    background-repeat: no-repeat ;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+#sq{
+  color:thistle;
+  cursor:progress;
+}
+#sq:hover{
+  color:white;
+  cursor:progress;
+}
+p{
+  cursor: pointer;
+}
+p:hover{
+  color: green;
+}
+audio{
+  width: 60%;
+}
+h1{
+                font-family:Calistoga ;
+            }
+            h4{
+              font-family:'Artifika';  
+              font-weight: 900;
+              text-transform: uppercase;
+              text-shadow: 9px 4px 3px rgba(233, 139, 139, 0.8);
+            }
+            
+  </style>
+    </head>
+    <body>
+        <br>
+       <center> <h1 style="font-size: 35px;">Music<i class="fa fa-music" style="font-size:24px"></i>
+        <i class="fa fa-music" style="font-size:20px"></i> <i class="fa fa-music" style="font-size:16px"></i>
+        </h1></center><br><br>
+        <center> <img src="https://img.freepik.com/free-vector/elegant-musical-notes-music-chord-background_1017-20759.jpg?size=338&ext=jpg" style="opacity: 0.95;" class="rounded-circle" width="30%" height="35%" style="margin-top:70px;opacity: 1.0;"></center>
+       <br> <center><audio controls  id="my"> 
+           
+            <source  src="0.mp3" type="audio/mpeg">
+          </audio>
+        
+        <h4 id="my2" style="color: red;">We don't talk anymore</h4></center>
+        <br>
+        
+<center>
+  <button  class="btn btn-light btn-sm" onclick="previous()" type="button"><i class="material-icons" style="font-size:20px">skip_previous</i></button>
+  <button class="btn btn-danger btn-sm"  onclick="stop()" type="button"><i class="material-icons" style="font-size:20px">stop</i></button>
+  <button class="btn btn-success btn-sm"  onclick="start()" type="button"><i class="material-icons" style="font-size:20px">play_arrow</i></button>
+  <button class="btn btn-warning btn-sm"  onclick="pause()" type="button"><i class="material-icons" style="font-size:20px">pause</i></button>
+  <button class="btn btn-primary btn-sm"  onclick="next()" type="button"><i class="material-icons" style="font-size:20px">skip_next</i></button>
+ 
+<br><br></center>
+      <br><br>
+       
+        <div class="container-fluid" style="background-color: rgba(255, 255, 255, 0.836);"> 
+          <br><br><br>
+          <h3>  <center><i class="material-icons" style="color: black;">library_music</i>Playlist</h3></center><br>
+            <div class="row ">
+              
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://a10.gaanacdn.com/images/albums/99/2194899/crop_480x480_2194899.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s1()">Darkside</p>
+                      </div>
+                </div></div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://m.media-amazon.com/images/M/MV5BNzBjYWIzNmQtZjA2NS00ZTMzLThmODQtMGE0MTEzZGE1YTgzXkEyXkFqcGdeQXVyNDQ5MDYzMTk@._V1_.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s2()">Attention</p>
+                      </div>
+                </div></div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://m.media-amazon.com/images/I/810Wehy3BHL._SS500_.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s3()">Crying in the club</p>
+                      </div>
+                </div></div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://a.wattpad.com/cover/207354537-352-k604906.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s4()">Princes doesn't Cry</p>
+                      </div>
+                </div></div>
+              </div><br>
+              <div class="row ">
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://2.bp.blogspot.com/-ZuVbfW1AvjU/Whk1d-Js_NI/AAAAAAAAAmU/9aHjGcaW5VsCVOevyws5t4IUcQ6GrAS5QCLcBGAs/s1600/sdfsdfdsf.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s5()">Thousand years</p>
+                      </div>
+                </div></div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://m.media-amazon.com/images/I/51dCVOQBXHL.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s6()">My heart will go on</p>
+                      </div>
+                </div></div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://i1.sndcdn.com/artworks-000274800965-cbw1ss-t500x500.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s7()">New rules</p>
+                      </div>
+                </div></div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://www.doctorsofchaos.com/wp-content/uploads/2018/01/ED-SHEERAN-SHAPE-OF-YOU-COVER-ART-1.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s8()">Shape of you</p>
+                      </div>
+                </div></div>
+              </div><br>
+              <div class="row ">
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://data.whicdn.com/images/274403680/original.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s9()">Love me like you do</p>
+                      </div>
+                </div></div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Idina_Menzel_-_Let_It_Go.png/220px-Idina_Menzel_-_Let_It_Go.png" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s10()">Let it go</p>
+                      </div>
+                </div></div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://cachedimages.podchaser.com/512x512/aHR0cHM6Ly9zc2wtc3RhdGljLmxpYnN5bi5jb20vcC9hc3NldHMvNi8yLzUvNy82MjU3YWZiNDk5NTFmZDM5L0JlbGlldmVyX0NvdmVyLmpwZw%3D%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s11()">Beliver</p>
+                      </div>
+                </div></div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                  <div class="thumbnail">
+                      <img src="https://m.media-amazon.com/images/M/MV5BNmNmNGExNDctM2Q3MC00MTU5LTkyYzMtMzMyYmI2MTA3MjU3XkEyXkFqcGdeQXVyNjE0ODc0MDc@._V1_.jpg" style="width:100%;height:230px;">
+                      <div class="caption">
+                        <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s12()">Girls like you</p>
+                      </div>
+                </div></div>
+              </div>  <br> 
+<div class="row ">
+  <div class="col-md-2">
+    <div class="thumbnail">
+        <img src="https://i1.wp.com/full-masti.com/wp-content/uploads/2018/01/Jennifer-Lopez-On-The-Floor-Ft-Pitbull-Hamid-Mohammadi-Remix.jpg?fit=600%2C388&ssl=1" style="width:100%;height:230px;">
+        <div class="caption">
+          <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s13()">Get on the floor</p>
+        </div>
+  </div></div>
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-2">
+    <div class="thumbnail">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/The_Heart_Wants_What_It_Wants_Selena_Gomez_cover.png" style="width:100%;height:230px;">
+        <div class="caption">
+          <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s14()">Hearts wants what it wants</p>
+        </div>
+  </div></div>
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-2">
+    <div class="thumbnail">
+        <img src="data:image/jpeg;base64,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" style="width:100%;height:230px;">
+        <div class="caption">
+          <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s15()">Cheap thrils</p>
+        </div>
+  </div></div>
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-2">
+    <div class="thumbnail">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmC1fsq6QrO1IbNi7mzdUgEh5rtrYe_ojwqw&usqp=CAU" style="width:100%;height:230px;">
+        <div class="caption">
+          <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s16()">Look what you made me do</p>
+        </div>
+  </div></div>
+</div><br>
+<div class="row ">
+  <div class="col-md-2">
+    <div class="thumbnail">
+        <img src="https://c-sf.smule.com/s-sf-bck2/arr/57/f8/b22a8344-e578-495c-ba92-5e66881dbb41.jpg" style="width:100%;height:230px;">
+        <div class="caption">
+          <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s17()">Get on the floor</p>
+        </div>
+  </div></div>
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-2">
+    <div class="thumbnail">
+        <img src="https://i.pinimg.com/236x/0e/07/ec/0e07ec7cef8306d010fc454264a991ae.jpg" style="width:100%;height:230px;">
+        <div class="caption">
+          <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s18()">Friends</p>
+        </div>
+  </div></div>
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-2">
+    <div class="thumbnail">
+        <img src="https://i.ytimg.com/vi/sBl3EpUqAjE/mqdefault.jpg" style="width:100%;height:230px;">
+        <div class="caption">
+          <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s19()">Play Date</p>
+        </div>
+  </div></div>
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-2">
+    <div class="thumbnail">
+        <img src="https://i.ytimg.com/vi/0KSOMA3QBU0/maxresdefault.jpg" style="width:100%;height:230px;">
+        <div class="caption">
+          <p style="font-weight: bold;font-family:serif;font-size:20px;" onclick="s20()">Dark Horse</p>
+        </div>
+  </div></div>
+</div>
+</div>
+<div class="bg-dark"><br>
+  
+    <center>
+  <h3 style="font-size:25px;color:white;"><u>Follow us</u></h3>
+ <i href="#" id="sq" style="font-size: 30px;margin-right: 10px;"class="fa fa-facebook"></i>
+ <i href="#" id="sq" style="font-size: 30px;margin-right: 10px;" class="fa fa-twitter"></i>
+ <i href="#" id="sq" style="font-size: 30px;margin-right: 10px;"class="fa fa-github"></i>
+ <i href="#" id="sq" style="font-size: 30px;margin-right: 10px;"class="fa fa-instagram"></i>
+ <i href="#" id="sq" style="font-size: 30px;" class="fa fa-linkedin"></i></center>
+ </div>
+        <script>
+           b=1;
+           var songn=["we don't talk anymore","Darkside","Attention","Crying in the club","Princes doesn't Cry","Thousand years","My heart will go on","New rules","Shape of you","Love me like you do","Let it go","Beliver","Girls like you","Get on the floor","Hearts wants what it wants","Cheap thrils","Look what you made me do","Speachless","Friends","Play Date","Dark Horse"];
+          var songs=['0.mp3','1.mp3','2.mp3','3.mp3','4.mp3','5.mp3','6.mp3','7.mp3','8.mp3','9.mp3','10.mp3','11.mp3','12.mp3','13.mp3','14.mp3','15.mp3','16.mp3','17.mp3','18.mp3','19.mp3','20.mp3'];
+   i=0;
+  
+    function next(){
+      if(i==20){
+              i=-1;
+             
+            }
+      if(i<20){
+             i++;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i);start();
+            if(i==20){
+              i=-1;
+             
+            }
+            } 
+          }
+          function previous(){
+            if(i<=0){
+            i=21;
+           }
+      if(i>=1){
+        i--;
+            document.getElementById("my").src=songs[i];
+            console.log(songs[i]);
+            document.getElementById("my2").innerHTML=songn[i];start();
+            }
+           
+          }
+          function s1(){
+            i=1;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function s2(){
+            i=2;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function s3(){
+            i=3;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function s4(){
+            i=4;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function s5(){
+            i=5;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function s6(){
+            i=6;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function s7(){
+            i=7;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          } function s8(){
+            i=8;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          } function s9(){
+            i=9;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          } function s10(){
+            i=10;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); 
+            start();
+          } function s11(){
+            i=11;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); 
+            start();
+          } function s12(){
+            i=12;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); 
+            start();
+          } function s13(){
+            i=13;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]);
+            start(); 
+          } function s14(){
+            i=14;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); 
+            start();
+          }
+          function s15(){
+            i=15;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); 
+            start();
+          }
+          function s16(){
+            i=16;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); 
+            start();
+          }
+          function s17(){
+            i=17;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function s18(){
+            i=18;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function s19(){
+            i=19;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function s20(){
+            i=20;
+            document.getElementById("my").src=songs[i];
+              document.getElementById("my2").innerHTML=songn[i];
+            console.log(songs[i],i,songn[i]); start();
+          }
+          function stop() { 
+            b=0;
+            var vid = document.getElementById("my"); 
+             vid.pause(); 
+             document.getElementById("my").src="";
+             
+}
+function start(){
+  var vid = document.getElementById("my"); if(b==0){
+  document.getElementById("my").src=songs[i];
+
+             vid.play();  b=1;}
+             else
+             vid.play();
+}
+function pause() { 
+           
+            var vid = document.getElementById("my"); 
+             vid.pause(); 
+            
+}
+var aud = document.getElementById("my");
+aud.onended = function() {
+ next();
+ start();
+};
+        </script>
+    </body>
+</html>
